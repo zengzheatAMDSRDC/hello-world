@@ -1,0 +1,10 @@
+git clone --> p4 sync
+git add --> p4 add
+git status --> p4 opened //git : changed file in stage or not, p4 : the files edited  
+//short status -s/--short
+git diff //only shows the unstaged changes
+git diff --satged --> p4 diff //git: shows all the satged changes going into the next commit
+git diff --cached(--staged) // to see what you've staged so far
+git difftool filename/filepath // ot look at the diffs(staged VS unstaged) by a graphical or viewing program
+git commit --> p4 commit   
+
