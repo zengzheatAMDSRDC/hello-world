@@ -10,6 +10,8 @@ git difftool filename/filepath // ot look at the diffs(staged VS unstaged) by a 
 git commit --> p4 submit
 git commit -a //Git automatically stage every file that is already tracked before doing the commit, letting you skip
 the git add part
+git commit -m 'description'// type your commit message inline with the commit command by specifying it
+after a -m flag
 git rm --> p4 delete //remove from staging area and your disk(WA)
 git rm --cached filename/directories/file_glob paterns//remove it from the staging area and keep it on your disk
 git mv file_from file_to//change the filename from file_from to file_to in the staging area
