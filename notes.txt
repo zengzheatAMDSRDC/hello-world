@@ -39,7 +39,7 @@ git remote add <name> <adress> // To add a new remote Git
 repository as a shortname you can reference easily
 git fetch <remote> VS git pull <remote> // git pull override the files you're working on, fetch the files from remote server and the file you're working on coexist. 
 git push <remote> <branch> --> p4 submit // push your master branch to your origin server
-attention: a. you should have the write access to that server
+attention: a. you should have the write access to that repository
            b. if someone else also clone from the same remote server and pushed before you, you can not push unless fetch the their work firs and incorporate it into yours before pushing.
 git remote show <remote> // lists the URL for the remote repository as well as the tracking branch information.
 git remote rename <pre_name> <new_name> // change a remote¿s shortname
