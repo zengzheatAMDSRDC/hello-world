@@ -6,7 +6,9 @@ git diff //only shows the unstaged changes
 git diff --satged --> p4 diff //git: shows all the satged changes going into the next commit
 git diff --cached(--staged) // to see what you've staged so far
 git difftool filename/filepath // ot look at the diffs(staged VS unstaged) by a graphical or viewing program
-git commit --> p4 commit 
+git commit --> p4 submit
+git commit -a //Git automatically stage every file that is already tracked before doing the commit, letting you skip
+the git add part
 git rm --> p4 delete //remove from staging area and your disk(WA)
 git rm --cached filename/directories/file_glob paterns//remove it from the staging area and keep it on your disk
 git mv file_from file_to//change the filename from file_from to file_to in the staging area
@@ -17,3 +19,19 @@ git log -stat --> p4 changes -s  // to see the abrreviated status of each commit
 git log --pretty=oneline // print each commit in a single line
 git log --pretty="%h - %s" --author='Junio C Hamano' --since="2008-10-01" \ --before="2008-11-01" --no-merges -- t/ //to see which commits modifying test files in the Git source code history
 were committed by Junio Hamano in the month of October 2008 and are not merge commits,
+git log --since=2.weeks //gets the list of commits made in the last two weeks
+git log --pretty=format:"%h - %an, %ar : %s"// lists some of the more useful options that format takes
+%h Abbreviated commit hash, %an Author name, %cn committer name, %ar Author date, relative
+git log --author=XXX //to see the commits submitted by Author XXX
+git commit --amend// If you want to redo that commit, make the additional changes you forgot, stage them, and commit again using the --amend option:,it overwrites your previous commit
+git reset HEAD <file> // unstaging a staged file
+git checkout -- <file> --> p4 revert // to discard changes of an unstaged file in working directory
+git branch testing //creat a new branch
+git checkout testing //switch branches
+git checkout -b hotfix // creat and switch to the branch hotfix
+git checkout master
+git remote -v // shows you the URLs that Git has stored for the shortname to be used
+when reading and writing to that remotegit merge hotfix // merge the hotfix branch back into your master branch
+git remote add <name> <adress> // To add a new remote Git
+repository as a shortname you can reference easily
+git fetch <remote>/ git pull <remote> // git pull override the files you're working on, fetch the files from remote server and the file you're working on coexist. 
