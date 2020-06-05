@@ -47,4 +47,4 @@ git remote remove <name> // remove a remote
 git aliases
 git config --global alias.ci commit // instead of typing git commit, you just need to type git ci
 git last // to see the last commit
-
+git merge(mergetool) --> p4 resolve // resolve the conflicts
