@@ -1,3 +1,4 @@
+/********************************************basic local Git operation**********************************************/
 git clone --> p4 sync
 git add --> p4 add
 git status --> p4 opened //git : changed file in stage or not, p4 : the files edited  
@@ -34,4 +35,14 @@ git remote -v // shows you the URLs that Git has stored for the shortname to be 
 when reading and writing to that remotegit merge hotfix // merge the hotfix branch back into your master branch
 git remote add <name> <adress> // To add a new remote Git
 repository as a shortname you can reference easily
-git fetch <remote>/ git pull <remote> // git pull override the files you're working on, fetch the files from remote server and the file you're working on coexist. 
+git fetch <remote> VS git pull <remote> // git pull override the files you're working on, fetch the files from remote server and the file you're working on coexist. 
+git push <remote> <branch> --> p4 submit // push your master branch to your origin server
+attention: a. you should have the write access to that server
+           b. if someone else also clone from the same remote server and pushed before you, you can not push unless fetch the their work firs and incorporate it into yours before pushing.
+git remote show <remote> // lists the URL for the remote repository as well as the tracking branch information.
+git remote rename <pre_name> <new_name> // change a remote¿s shortname
+git remote remove <name> // remove a remote
+git aliases
+git config --global alias.ci commit // instead of typing git commit, you just need to type git ci
+git last // to see the last commit
+
