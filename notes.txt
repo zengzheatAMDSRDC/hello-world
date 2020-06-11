@@ -65,4 +65,4 @@ attention: this puts your repository in "detached HEAD"
            a. if you make changes and then create a commit, the tag will stay the same,
               but your new commit won't belong to any branch and will be unreachable, except by the exact commit hash.
            b. if you need to make changes, say you're fixing a bug on an older version, for instance, you will generally want to create a branch:
-
+git merge master // merge the files on the current branch with that on the mater branch
