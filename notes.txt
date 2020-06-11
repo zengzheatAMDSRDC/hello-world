@@ -51,3 +51,18 @@ git aliases
 git config --global alias.ci commit // instead of typing git commit, you just need to type git ci
 git last // to see the last commit
 git merge(mergetool) --> p4 resolve // resolve the conflicts
+git tag //list your tags
+git tag -l "v1.8.5*" // to look at the 1.8.5 series
+git tag -a v1.4 -m "my version 1.4" //creat an annotated tag in Git
+git show v1.4 // to see the tag data along with the commit that was tagged
+git push origin v1.5 // push tags to a shared server after you have created them
+git push origin --tags // to push up a lot of tags at once
+git tag -d <tagname> delete  a tag on your local repository
+git push origin :refs/tags/v1.4-lw // to delete a tag from a remote server
+git push origin --delete <tagname> // to delete a tag from a remote server
+git checkout v2.0.0 // to view the versions of files a tag is pointing to
+attention: this puts your repository in "detached HEAD"
+           a. if you make changes and then create a commit, the tag will stay the same,
+              but your new commit won't belong to any branch and will be unreachable, except by the exact commit hash.
+           b. if you need to make changes, say you're fixing a bug on an older version, for instance, you will generally want to create a branch:
+
