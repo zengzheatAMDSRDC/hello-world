@@ -27,6 +27,7 @@ git log --pretty=format:"%h - %an, %ar : %s"// lists some of the more useful opt
 %h Abbreviated commit hash, %an Author name, %cn committer name, %ar Author date, relative
 git log --author=XXX //to see the commits submitted by Author XXX
 git log --pretty="%h %s %an %ar" -<n> <filename>/<filepath> // to see the last n file log including short hash, subject, author name, author date.
+git log --decorate //to see where the branch pointers are pointing 
 git show <hash> <filename>
 git commit --amend// If you want to redo that commit, make the additional changes you forgot, stage them, and commit again using the --amend option:,it overwrites your previous commit
 git reset HEAD <file> // unstaging a staged file
