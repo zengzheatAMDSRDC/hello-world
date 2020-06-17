@@ -54,6 +54,7 @@ git merge(mergetool) --> p4 resolve // resolve the conflicts
 git tag //list your tags
 git tag -l "v1.8.5*" // to look at the 1.8.5 series
 git tag -a v1.4 -m "my version 1.4" //creat an annotated tag in Git
+git tag -a <version> <hash> // add a hash to a specific hash
 git show v1.4 // to see the tag data along with the commit that was tagged
 git push origin v1.5 // push tags to a shared server after you have created them
 git push origin --tags // to push up a lot of tags at once
